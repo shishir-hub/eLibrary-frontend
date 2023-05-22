@@ -15,9 +15,6 @@ function BookDetails({ bookDetails, setBookDetails }) {
     let totalRate = 0;
     rating.forEach(el => { totalRate = el + totalRate });
     let avgRate = totalRate / (noOfRating !== 0 ? noOfRating : 1) || 0;
-    console.log('Average Rating: ', avgRate);
-    console.log(rating);
-    console.log(totalRate);
     setStars({
       avgRating: avgRate,
       totalUser: noOfRating
@@ -30,7 +27,8 @@ function BookDetails({ bookDetails, setBookDetails }) {
     let rating = [...book?.rating];
     let reviewed_by = [...book?.reviewed_by];
 
-    if (reviewed_by.indexOf(user?._id !== -1)) {
+
+    if (reviewed_by.indexOf(user?._id) === -1) {
       rating.push(e.target.rate.value);
       reviewed_by.push(user._id);
 
