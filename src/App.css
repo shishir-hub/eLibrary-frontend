@@ -7,10 +7,6 @@ ul{
     list-style: none;
 }
 
-*{
-    box-sizing: border-box;
-}
-
 input:focus{
     outline: none;
 }
@@ -19,4 +15,9 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button { 
     -webkit-appearance: none; 
     margin: 0; 
+}
+
+.remove-scroll{
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
 }

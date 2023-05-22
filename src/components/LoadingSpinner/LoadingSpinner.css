@@ -13,6 +13,7 @@
     border-top: 10px solid #383636; /* Black */
     border-radius: 50%;
     animation: spinner 1.5s linear infinite;
+    z-index: 10;
   }
   .back{
     position: fixed;
@@ -25,4 +26,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 5;
   }

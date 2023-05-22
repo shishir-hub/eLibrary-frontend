@@ -19,21 +19,21 @@ function Navbar() {
     }
 
     return (
-        <div className='navigation'>
-            <div className="navbar-container">
-                <h4>eLibrary</h4>
-                <ul>
-                    <li className={location.pathname === '/' ? "active" : ""}><div /><Link to='/'>Home</Link></li>
-                    {user ? <>
-                        <li className={location.pathname === '/myCollection' ? "active" : ""}><div /><Link to='/myCollection'>My Books</Link></li>
-                        <button onClick={handleLogout} className='btn btn-danger' type='button'>Logout</button></> :
-                        <>
-                            <li className={location.pathname === '/login' ? "active" : ""}><div /><Link to='/login'>Login</Link></li>
-                            <li className={location.pathname === '/signup' ? "active" : ""}><div /><Link to='/signup'>Register</Link></li>
-                        </>}
-                </ul>
-            </div>
+        // <div className='navigation'>
+        <div className="navbar-container">
+            <h4>eLibrary</h4>
+            <ul>
+                <li className={location.pathname === '/' ? "active" : ""}><div /><Link to='/'>Home</Link></li>
+                {user ? <>
+                    <li className={location.pathname === '/myCollection' ? "active" : ""}><div /><Link to='/myCollection'>My Books</Link></li>
+                    <button onClick={handleLogout} className='btn btn-danger' type='button'>Logout</button></> :
+                    <>
+                        <li className={location.pathname === '/login' ? "active" : ""}><div /><Link to='/login'>Login</Link></li>
+                        <li className={location.pathname === '/signup' ? "active" : ""}><div /><Link to='/signup'>Register</Link></li>
+                    </>}
+            </ul>
         </div>
+        // </div>
     )
 }
 

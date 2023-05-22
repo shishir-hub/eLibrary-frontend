@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { LibraryContext } from "../../App";
 
 function Signup() {
-  const { setIsLoading } = useContext(LibraryContext);
+  const { setIsLoading, alert, setAlert } = useContext(LibraryContext);
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,13 +18,26 @@ function Signup() {
     axios
       .post(`${process.env.REACT_APP_SERVER_DOMAIN}/signup`, data)
       .then((res) => {
-        console.log(res);
+        setAlert({
+          isOpen: true,
+          message: "User Created Successfully",
+          type: "success",
+        });
         navigate("/login");
+        setIsLoading(false);
       })
       .catch((err) => {
-        console.log(err);
+        setAlert({
+          isOpen: true,
+          message: "Something went wrong!",
+          type: "danger",
+        });
+        setIsLoading(false);
       });
-    setIsLoading(false);
+
+    setTimeout(() => {
+      setAlert({ ...alert, isOpen: false });
+    }, 5000);
   };
   return (
     <div className="signup-wrapper">

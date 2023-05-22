@@ -1,0 +1,25 @@
+.detail-wrapper{
+    background-color: #B2BEB5;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 2rem;
+    max-height: 100vh;
+    overflow: auto;
+
+    
+
+            form{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                width: 100%;
+
+                .select{
+                    display: block;
+                    padding: 0.5rem;
+                    font-size: medium;
+                    border-radius: 10px;
+                }
+            }
+        
+}
