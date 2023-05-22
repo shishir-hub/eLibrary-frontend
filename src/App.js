@@ -36,11 +36,11 @@ function App() {
       })
       .catch(err => {
         setIsLoading(false);
-        setAlert({
-          isOpen: true,
-          message: "Something went wrong!",
-          type: "danger",
-        });
+        // setAlert({
+        //   isOpen: true,
+        //   message: "Something went wrong!",
+        //   type: "danger",
+        // });
 
       })
     setTimeout(() => {
