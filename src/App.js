@@ -59,7 +59,7 @@ function App() {
           <Navbar />
           <Alert alert={alert} />
           <Routes>
-            <Route path='/' element={user ? <Home /> : <Login />}></Route>
+            <Route path='/' element={user ? <Home /> : <Home />}></Route>
             <Route path='/myCollection' element={user ? <Collection /> : <Home />} />
             <Route path='/addbook' element={user ? <AddBook /> : <Home />} />
             <Route path='/login' element={user ? <Home /> : <Login />}></Route>

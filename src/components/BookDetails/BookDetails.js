@@ -93,7 +93,7 @@ function BookDetails({ bookDetails, setBookDetails }) {
                 <option value={4}>4</option>
                 <option value={5}>5</option>
               </select>
-              <button disabled={user?._id === book.user_id} className="btn btn-primary mx-3" type="submit">Rate</button>
+              <button disabled={user?._id === book.user_id || !user} className="btn btn-primary mx-3" type="submit">Rate</button>
             </form>
           </div>
           <div className="d-flex justify-content-center mt-4">
